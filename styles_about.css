@@ -173,7 +173,7 @@
     margin: .625rem 2.125rem .625rem .625rem;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 80rem) {
     /* this should be for mobile - less than 80rem */
 
     .additional-text,
