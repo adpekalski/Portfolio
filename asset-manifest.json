@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/Portfolio/static/js/main.ecf35eb8.js",
+    "static/media/Pękalski_Adrian_CV_Photo.jpg": "/Portfolio/static/media/Pękalski_Adrian_CV_Photo.3f6266de4c2eb1ff84d6.jpg",
+    "static/media/Pękalski_Adrian_CV.pdf": "/Portfolio/static/media/Pękalski_Adrian_CV.038fc952a6db874ddb89.pdf",
+    "static/media/porfolio_screen1.png": "/Portfolio/static/media/porfolio_screen1.e11be182ac1743be59e2.png",
+    "static/media/porfolio_screen3.png": "/Portfolio/static/media/porfolio_screen3.f2f58de3619a4d2e0f0c.png",
+    "static/media/porfolio_screen2.png": "/Portfolio/static/media/porfolio_screen2.f613e6197fea0a48d359.png",
+    "index.html": "/Portfolio/index.html",
+    "main.ecf35eb8.js.map": "/Portfolio/static/js/main.ecf35eb8.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ecf35eb8.js"
+  ]
+}

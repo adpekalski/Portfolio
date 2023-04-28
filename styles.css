@@ -1,0 +1,296 @@
+/* PRESS "Alt + 2 5" TO FIND NEXT SECTION */
+
+/* dark/light mode corresponding to user preferences - todo */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ↓ COLORS ↓ */
+:root {
+    --default-background: #191A19;
+    --default-boxes: #222322;
+    --default-text: #ebeee2;
+    --default-border: #343934f0;
+    --default-element: #4E9F3D;
+
+    --first-color: #a141c1;
+    --second-color: #4E9F3D;
+    --third-color: #CD0404;
+    --fourth-color: #537FE7;
+    --fifth-color: #b05002;
+    --sixth-color: #838383;
+}
+
+/* ↓ WHOLE SITE STYLE ↓ */
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--default-background);
+    font-family: "Roboto", cursive;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.125rem;
+    margin: 1.25rem 0;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--default-text);
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    color: var(--default-text);
+}
+
+.colorful {
+    color: var(--default-element);
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.colorful-bck {
+    background-color: var(--default-element);
+}
+
+.darker {
+    filter: brightness(60%);
+}
+
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    height: 16.25rem;
+    transform: translate(0, -50%);
+    background-color: var(--default-background);
+}
+
+.box-for-all {
+    display: flex;
+}
+
+.web-part-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* margin-left: 1.25rem; */
+}
+
+.web-part-content {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.about,
+.home,
+.portfolio,
+.contact {
+    max-width: 100%;
+    display: grid;
+}
+
+/* ↓ SCROLLBAR SECTION ↓ ------------------------------ */
+::-webkit-scrollbar {
+    background-color: var(--default-background);
+    width: .625rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--default-boxes);
+    border-left: var(--default-border) solid .125rem;
+    box-shadow: .625rem .5rem .625rem -0.375rem rgba(0, 0, 0, 0.3);
+    border-radius: 6.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border: .375rem solid var(--default-element);
+    background-color: var(--default-element);
+    border-radius: 6.25rem;
+}
+
+textarea::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 6.25rem 6.25rem 0 0;
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: var(--default-background);
+    border: var(--default-border) solid .125rem;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 6.25rem 6.25rem 0 0;
+    margin: 1.875rem 0 0 0;
+}
+
+/* ↓ MULTIPLE PAGE CONTENT ↓ ------------------------------ */
+.more-button:hover,
+.cv-button:hover,
+.contact-button:hover,
+.contact-card:hover,
+.submit-button:hover,
+.clear-button:hover {
+    cursor: pointer;
+    scale: 1.01;
+}
+
+.page-title-box {
+    /* CRUCIAL FOR SPACING BETWEEN PAGE TITLE AND REST */
+    height: 5rem;
+    position: relative;
+    grid-area: top;
+}
+
+.page-title {
+    margin: 0;
+    position: absolute;
+    top: 0;
+}
+
+.page-title::after {
+    position: absolute;
+    content: "";
+    bottom: -0.625rem;
+    left: -0.625rem;
+    height: 1.875rem;
+    width: 60%;
+    border-bottom: var(--default-element) solid .375rem;
+    border-radius: 0 1.25rem;
+}
+
+/* ↓ MUI API COMPONENTS ↓ */
+.MuiTabPanel-root.MuiTabPanel-root {
+    padding: 0;
+}
+
+.MuiButton-root.MuiButton-root:hover,
+.MuiButton-root.MuiButton-root {
+    color: var(--default-element);
+    border: var(--default-element) solid .1875rem;
+}
+
+.MuiButton-root.MuiButton-root {
+    text-transform: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 1.25rem;
+    /* BUTTON LENGTH CHANGE ??? */
+    width: 10.625rem;
+    height: 2.875rem;
+}
+
+.MuiIconButton-root.MuiIconButton-root {
+    margin: 0 .3125rem;
+}
+
+.MuiTab-root.MuiTab-root.Mui-selected {
+    color: var(--default-element);
+}
+
+.MuiTab-root.MuiTab-root {
+    position: relative;
+    color: var(--default-text);
+    text-transform: none;
+    font-size: 1.125rem;
+    /* PREVIOUSLY WAS 400 */
+    font-weight: 500;
+}
+
+.MuiTabs-indicator.MuiTabs-indicator {
+    background-color: var(--default-element);
+}
+
+@media (max-width: 40rem) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-weight: 500;
+    }
+
+    h4 {
+        font-weight: 300;
+    }
+
+    p {
+        font-size: 0.8rem;
+        margin: 1.25rem 0;
+        line-height: 1.5;
+    }
+
+    .about,
+    .home,
+    .portfolio,
+    .contact {
+        /* display: flex;
+        justify-content: center; */
+        /* overflow: hidden; */
+        /* max-width: 80%; */
+        display: grid;
+    }
+
+    .page-title-box {
+        height: 3rem;
+    }
+
+}
+
+
+/* @media (max-width: 28.75rem) {
+
+
+   
+
+} */
