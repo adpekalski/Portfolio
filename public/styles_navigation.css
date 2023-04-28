@@ -1,0 +1,158 @@
+/* ↓ LEFT NAVIGATION PANEL ↓ ------------------------------ */
+
+.left-panel {
+    position: relative;
+}
+
+.right-panel {
+    position: relative;
+}
+
+.left-line-through {
+    height: 100%;
+    width: 1.75rem;
+    border-right: var(--default-element) solid .125rem;
+}
+
+.scroll-single-button:first-child {
+    margin-top: 5rem;
+}
+
+.scroll-single-button {
+    position: relative;
+    z-index: 2;
+    margin: 1.25rem;
+    width: .9375rem;
+    height: .9375rem;
+    border: var(--default-element) solid .125rem;
+    border-radius: 1.5625rem;
+    cursor: pointer;
+}
+
+.scroll-single-button::after {
+    z-index: 1;
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: .9375rem;
+    height: .9375rem;
+    border-radius: 1.5625rem;
+    border: var(--default-element) solid .125rem;
+    filter: brightness(50%);
+}
+
+.click-me-text {
+    position: absolute;
+    background-color: var(--default-background);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin-top: 3.125rem;
+    padding: 1.25rem 0;
+}
+
+.scroll-me-text {
+    background-color: var(--default-background);
+    position: absolute;
+    bottom: 3.125rem;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: 1.25rem 0;
+}
+
+.scroll-me-text p,
+.click-me-text p {
+    font-size: .9375rem;
+    line-height: 2;
+    margin: 0 .75rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.icon-box {
+    position: fixed;
+    z-index: 2;
+    top: 1rem;
+    right: 1rem;
+    padding: .125rem 0;
+    text-align: center;
+    width: 9.375rem;
+}
+
+.icon-box .MuiTouchRipple-root {
+    color: var(--default-element);
+}
+
+.icon {
+    color: var(--default-text);
+    filter: brightness(50%);
+}
+
+.icon:hover {
+    filter: brightness(100%);
+}
+
+.icon.Mui-active {
+    color: var(--default-element);
+}
+
+.sticky-button {
+    background-color: var(--default-text);
+    margin: 1.25rem;
+}
+
+.colors-box {
+    border-radius: 1.25rem;
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    width: 3.125rem;
+    padding: .125rem 0;
+    flex-direction: column;
+}
+
+.first-dot-field .MuiTouchRipple-root,
+.first-dot {
+    color: var(--first-color);
+}
+
+.second-dot-field .MuiTouchRipple-root,
+.second-dot {
+    color: var(--second-color);
+}
+
+.third-dot-field .MuiTouchRipple-root,
+.third-dot {
+    color: var(--third-color);
+}
+
+.fourth-dot-field .MuiTouchRipple-root,
+.fourth-dot {
+    color: var(--fourth-color);
+}
+
+.fifth-dot-field .MuiTouchRipple-root,
+.fifth-dot {
+    color: var(--fifth-color);
+}
+
+.sixth-dot-field .MuiTouchRipple-root,
+.sixth-dot {
+    color: var(--sixth-color);
+}
+
+@media (max-width: 40rem) {
+    .left-panel {
+        display: none;
+    }
+
+    /* IF SWITCH TO LEFT */
+    .icon-box {
+        left: 0.5rem;
+    }
+
+    .colors-box {
+        flex-direction: row;
+        left: 0.5rem;
+    }
+}
